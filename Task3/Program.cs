@@ -18,7 +18,7 @@ namespace Task3
 
             Console.WriteLine("Подсчёт количества строк, слов, символов в файле\n");
 
-            const string path = "text.txt";
+            const string path = "../../text.txt";
             int countLines = 0;
             int countWords = 0;
             int countSymbols = 0;
@@ -35,14 +35,14 @@ namespace Task3
                         countSymbols += line.Length;
                     }
                 }
+                Console.WriteLine("Количество строк в файле {0}: {1}", path, countLines);
+                Console.WriteLine("Количество слов в файле {0}: {1}", path, countWords);
+                Console.WriteLine("Количество символов в файле {0} (не считая символов перевода строки): {1}", path, countSymbols);
             }
             else
             {
                 Console.WriteLine("Файл {0} не существует", path);
             }
-            Console.WriteLine("Количество строк в файле {0}: {1}", path, countLines);
-            Console.WriteLine("Количество слов в файле {0}: {1}", path, countWords);
-            Console.WriteLine("Количество символов в файле {0} (не считая символов перевода строки): {1}", path, countSymbols);
             Console.ReadKey();
         }
         static int CountWordsInLine(string line)
