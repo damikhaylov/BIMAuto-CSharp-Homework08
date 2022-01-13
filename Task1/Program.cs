@@ -23,7 +23,7 @@ namespace Task1
             Console.WriteLine("Вывод содержимого дирректории (расположенной на два уровня " +
                 "выше текущей), включая поддиректории\n");
 
-            string upupDirPath = "../../."; //System.IO.Directory.GetParent(".").Parent.FullName;
+            string upupDirPath = "../../.";
             if (Directory.Exists(upupDirPath))
             {
                 Console.WriteLine(Path.GetFullPath(upupDirPath) + "\n");
